@@ -1,0 +1,85 @@
+@import './variables';
+
+.filter {
+  background-color: $color-white;
+  padding: 20px 0;
+  border-radius: 5px;
+  box-shadow: $box-shadow;
+  margin-bottom: auto;
+  font-family: $main-font-family;
+  line-height: 20px;
+  letter-spacing: 0;
+  min-width: 232px;
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    padding: 0 20px;
+    font-size: 13px;
+    font-weight: 700;
+    color: $color-dark-text;
+  }
+
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 10px 0 10px 50px;
+    cursor: pointer;
+    font-size: 14px;
+    color: $color-dark-text;
+
+    &:hover {
+      background-color: $color-lightblue;
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+
+      & ~ .checkmark {
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        height: 20px;
+        width: 20px;
+        background-color: $color-white;
+        border: 1px solid $color-blue-border;
+        border-radius: 4px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          display: none;
+          left: 7px;
+          top: 3px;
+          width: 5px;
+          height: 10px;
+          border: solid $color-white;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+        }
+      }
+
+      &:checked ~ .checkmark {
+        border: 1px solid $color-blue;
+      }
+
+      &:checked ~ .checkmark::after {
+        display: block;
+        border-color: $color-blue;
+      }
+    }
+  }
+
+  @media (width <= 768px) {
+    max-width: 502px;
+  }
+
+  @media (width <= 426px) {
+    border-radius: 0;
+  }
+}
