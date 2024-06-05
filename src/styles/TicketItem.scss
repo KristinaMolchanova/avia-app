@@ -12,7 +12,7 @@
   @media (width <= 768px) {
     width: 100%;
   }
-  
+
   @media (width <= 426px) {
     border-radius: 0;
   }
@@ -71,7 +71,7 @@
   &__return-route,
   &__return-duration,
   &__return-transfers {
-    width: 141px; 
+    width: 141px;
 
     @media (width <= 768px) {
       width: initial;
@@ -94,7 +94,7 @@
     }
 
     @media (width <= 426px) {
-      &-label, 
+      &-label,
       &-value {
         font-size: 12px;
         line-height: 18px;
@@ -105,5 +105,5 @@
   grid-template:
     'price . logo' 46px
     'route duration transfers' 1fr
-    'returnRoute returnDuration returnTransfers' 1fr; 
+    'returnRoute returnDuration returnTransfers' 1fr;
 }
