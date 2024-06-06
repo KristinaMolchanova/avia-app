@@ -39,6 +39,10 @@ const TicketList: React.FC<TicketListProps> = () => {
     return <div>{error}</div>;
   }
 
+  if (!tickets.length) {
+    return <div className="no-tickets">{DEFAULT_MESSAGES.NO_TICKETS_FOUND}</div>;
+  }
+
   const hasMoreTickets = tickets.length < allTickets.length;
 
   return (

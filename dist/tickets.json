@@ -1,0 +1,118 @@
+[
+  {
+    "id": 1,
+    "price": 150,
+    "transfers": 1,
+    "transferCity": "FRA",
+    "origin": "BER",
+    "destination": "CDG",
+    "departureTime": "2024-06-01T08:00:00Z",
+    "arrivalTime": "2024-06-01T11:00:00Z",
+    "returnDepartureTime": "2024-06-05T08:00:00Z",
+    "returnArrivalTime": "2024-06-05T11:00:00Z"
+  },
+  {
+    "id": 2,
+    "price": 120,
+    "transfers": 0,
+    "origin": "CIA",
+    "destination": "MAD",
+    "departureTime": "2024-06-01T09:00:00Z",
+    "arrivalTime": "2024-06-01T11:00:00Z",
+    "returnDepartureTime": "2024-06-05T09:00:00Z",
+    "returnArrivalTime": "2024-06-05T11:00:00Z"
+  },
+  {
+    "id": 3,
+    "price": 200,
+    "transfers": 2,
+    "transferCity": "BRU, ZUR",
+    "origin": "AMS",
+    "destination": "VIE",
+    "departureTime": "2024-06-01T07:00:00Z",
+    "arrivalTime": "2024-06-01T11:00:00Z",
+    "returnDepartureTime": "2024-06-05T07:00:00Z",
+    "returnArrivalTime": "2024-06-05T11:00:00Z"
+  },
+  {
+    "id": 4,
+    "price": 130,
+    "transfers": 1,
+    "transferCity": "MAD",
+    "origin": "LIS",
+    "destination": "BCN",
+    "departureTime": "2024-06-01T10:00:00Z",
+    "arrivalTime": "2024-06-01T12:30:00Z",
+    "returnDepartureTime": "2024-06-05T10:00:00Z",
+    "returnArrivalTime": "2024-06-05T12:30:00Z"
+  },
+  {
+    "id": 5,
+    "price": 180,
+    "transfers": 0,
+    "origin": "PRG",
+    "destination": "BUD",
+    "departureTime": "2024-06-01T11:00:00Z",
+    "arrivalTime": "2024-06-01T12:30:00Z",
+    "returnDepartureTime": "2024-06-05T11:00:00Z",
+    "returnArrivalTime": "2024-06-05T12:30:00Z"
+  },
+  {
+    "id": 6,
+    "price": 140,
+    "transfers": 1,
+    "transferCity": "ARN",
+    "origin": "CPH",
+    "destination": "HEL",
+    "departureTime": "2024-06-01T12:00:00Z",
+    "arrivalTime": "2024-06-01T15:20:00Z",
+    "returnDepartureTime": "2024-06-05T12:00:00Z",
+    "returnArrivalTime": "2024-06-05T15:20:00Z"
+  },
+  {
+    "id": 7,
+    "price": 110,
+    "transfers": 0,
+    "origin": "ARN",
+    "destination": "OSL",
+    "departureTime": "2024-06-01T13:00:00Z",
+    "arrivalTime": "2024-06-01T14:50:00Z",
+    "returnDepartureTime": "2024-06-05T13:00:00Z",
+    "returnArrivalTime": "2024-06-05T14:50:00Z"
+  },
+  {
+    "id": 8,
+    "price": 90,
+    "transfers": 2,
+    "transferCity": "MAN, GLA",
+    "origin": "DUB",
+    "destination": "EDI",
+    "departureTime": "2024-06-01T14:00:00Z",
+    "arrivalTime": "2024-06-01T16:10:00Z",
+    "returnDepartureTime": "2024-06-05T14:00:00Z",
+    "returnArrivalTime": "2024-06-05T16:10:00Z"
+  },
+  {
+    "id": 9,
+    "price": 160,
+    "transfers": 1,
+    "transferCity": "GDA",
+    "origin": "WAW",
+    "destination": "KRK",
+    "departureTime": "2024-06-01T15:00:00Z",
+    "arrivalTime": "2024-06-01T17:20:00Z",
+    "returnDepartureTime": "2024-06-05T15:00:00Z",
+    "returnArrivalTime": "2024-06-05T17:20:00Z"
+  },
+  {
+    "id": 10,
+    "price": 100,
+    "transfers": 0,
+    "origin": "ATH",
+    "destination": "SOF",
+    "departureTime": "2024-06-01T16:00:00Z",
+    "arrivalTime": "2024-06-01T18:50:00Z",
+    "returnDepartureTime": "2024-06-05T16:00:00Z",
+    "returnArrivalTime": "2024-06-05T18:50:00Z"
+  }
+]

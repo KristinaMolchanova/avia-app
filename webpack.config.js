@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/index.tsx',
@@ -39,6 +40,9 @@ module.exports = {
       files: '**/*.scss',
       failOnError: false,
       quiet: false
+    }),
+    new CopyWebpackPlugin({
+      patterns: [{ from: 'public/tickets.json', to: '.' }]
     })
   ],
   devServer: {

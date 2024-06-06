@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
+import config from './../../.env.config';
 
 export interface TicketType {
   id: number;
@@ -32,7 +33,9 @@ const initialState: TicketsState = {
 };
 
 export const fetchTickets = createAsyncThunk('tickets/fetchTickets', async () => {
-  const response = await fetch('/tickets.json');
+  const response = await fetch(
+    `${process.env.NODE_ENV === 'development' ? '/tickets.json' : process.env.PUBLIC_URL}`
+  );
   if (!response.ok) {
     throw new Error('Network response was not ok');
   }
