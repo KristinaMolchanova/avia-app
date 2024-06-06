@@ -2,13 +2,19 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const webpack = require('webpack');
+const dotenv = require('dotenv');
+const env = dotenv.config().parsed;
 
-module.exports = {
-  entry: './src/index.tsx',
+module.exports = (env, argv) => {
+  const isProd = argv.mode === 'production';
+  const publicPath = isProd ? env.PUBLIC_URL: '/';
+
+  return {entry: './src/index.tsx',
   output: {
-    filename: 'bundle.js',
+    filename: 'bundle.[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/'
+    publicPath: publicPath
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx']
@@ -42,7 +48,11 @@ module.exports = {
       quiet: false
     }),
     new CopyWebpackPlugin({
-      patterns: [{ from: 'public/tickets.json', to: '.' }]
+      patterns: [{ from: 'public/tickets.json', to: '.' }, { from: 'public/favicon.ico', to: '.' }]
+    }),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(argv.mode),
+      'process.env.PUBLIC_URL': JSON.stringify(publicPath)
     })
   ],
   devServer: {
@@ -52,5 +62,5 @@ module.exports = {
     compress: true,
     port: 9000,
     historyApiFallback: true
-  }
+  }}
 };

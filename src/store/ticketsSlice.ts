@@ -33,6 +33,8 @@ const initialState: TicketsState = {
 };
 
 export const fetchTickets = createAsyncThunk('tickets/fetchTickets', async () => {
+  console.log(process.env.NODE_ENV);
+  
   const response = await fetch(
     `${process.env.NODE_ENV === 'development' ? '/tickets.json' : process.env.PUBLIC_URL}`
   );
