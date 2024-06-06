@@ -4,11 +4,11 @@ const StylelintPlugin = require('stylelint-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 const dotenv = require('dotenv');
-const env = dotenv.config().parsed;
+dotenv.config();
 
 module.exports = (env, argv) => {
   const isProd = argv.mode === 'production';
-  const publicPath = isProd ? env.PUBLIC_URL: '/';
+  const publicPath = isProd ? (process.env.PUBLIC_URL || '/avia-app/'): '/';
 
   return {entry: './src/index.tsx',
   output: {
@@ -38,7 +38,9 @@ module.exports = (env, argv) => {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html'
+      template: './public/index.html',
+      filename: 'index.html',
+        inject: 'body'
     }),
     new StylelintPlugin({
       configFile: '.stylelintrc.json',
@@ -48,7 +50,10 @@ module.exports = (env, argv) => {
       quiet: false
     }),
     new CopyWebpackPlugin({
-      patterns: [{ from: 'public/tickets.json', to: '.' }, { from: 'public/favicon.ico', to: '.' }]
+      patterns: [
+        { from: 'public/tickets.json', to: '.' }, 
+        { from: 'public/favicon.ico', to: '.' }
+      ]
     }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(argv.mode),
