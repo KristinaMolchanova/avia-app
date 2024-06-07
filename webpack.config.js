@@ -32,7 +32,14 @@ module.exports = (env, argv) => {
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/,
-        use: 'file-loader'
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[contenthash].[ext]',
+            outputPath: 'assets/images',
+            publicPath: `${publicPath}assets/images`
+          },
+        },]
       }
     ]
   },
