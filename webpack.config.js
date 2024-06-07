@@ -40,7 +40,10 @@ module.exports = (env, argv) => {
     new HtmlWebpackPlugin({
       template: './public/index.html',
       filename: 'index.html',
-        inject: 'body'
+      inject: 'body',
+      templateParameters: {
+        PUBLIC_URL: publicPath,
+      }
     }),
     new StylelintPlugin({
       configFile: '.stylelintrc.json',
