@@ -37,7 +37,7 @@ module.exports = (env, argv) => {
           options: {
             name: '[name].[contenthash].[ext]',
             outputPath: 'assets/images',
-            publicPath: `${publicPath}assets/images`
+            publicPath: `${publicPath}assets/images/`
           },
         },]
       }
