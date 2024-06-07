@@ -8,7 +8,7 @@ dotenv.config();
 
 module.exports = (env, argv) => {
   const isProd = argv.mode === 'production';
-  const publicPath = isProd ? (process.env.PUBLIC_URL || '/avia-app/'): '/';
+  const publicPath = isProd ? process.env.PUBLIC_URL: '/';
 
   return {entry: './src/index.tsx',
   output: {

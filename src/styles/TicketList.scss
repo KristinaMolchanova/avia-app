@@ -35,10 +35,13 @@
 }
 
 .no-tickets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: $color-dark-text;
-  text-align: center;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 20px;
   letter-spacing: 0.5px;
+  width: 100%;
 }
